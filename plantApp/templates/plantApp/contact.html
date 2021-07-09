@@ -1,0 +1,112 @@
+{% extends 'plantApp/base.html' %}%}
+
+{% block content %}
+
+        <!--Mobile Menu-->
+        <div class="side-menu__block">
+
+
+            <div class="side-menu__block-overlay custom-cursor__overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div><!-- /.side-menu__block-overlay -->
+            <div class="side-menu__block-inner ">
+                <div class="side-menu__top justify-content-end">
+
+                    <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="images/icons/close-1-1.png"
+                            alt=""></a>
+                </div><!-- /.side-menu__top -->
+
+
+                <nav class="mobile-nav__container">
+                    <!-- content is loading via js -->
+                </nav>
+                <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
+               
+            </div><!-- /.side-menu__block-inner -->
+        </div><!-- /.side-menu__block -->
+
+        
+
+        <!--Contact Section-->
+        <section class="contact-section">
+            <div class="auto-container">
+                
+
+                
+                <div class="form-box">
+                    <div class="sec-title">
+                        <h2>Write Us a Message<span class="dot">.</span></h2>
+                    </div>
+                    <div class="default-form">
+                        <form method="POST"  id="contact-form">
+                        {% csrf_token %}
+                            <div class="row clearfix">
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-inner">
+                                        <input type="text" name="username" value="" placeholder="Your Name" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-inner">
+                                        <input type="email" name="email" value="" placeholder="Email Address"
+                                            required="">
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-inner">
+                                        <input type="text" name="phone" value="" placeholder="Phone Number" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-inner">
+                                        <input type="text" name="subject" value="" placeholder="Subject" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <div class="field-inner">
+                                        <textarea name="message" placeholder="Write Message" required=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <button class="theme-btn btn-style-one">
+                                        <i class="btn-curve"></i>
+                                        <span class="btn-title">Send message</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="main-footer main-footer__two" style="background-image: url(images/background/footer-bg-2.jpg);">
+            <div class="auto-container">
+                <div class="footer-widget text-center">
+                    
+                    <ul class="social-links clearfix">
+                        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                       
+                    </ul>
+                </div><!-- /.footer-widget -->
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                  <div class="auto-container">
+                    <div class="inner clearfix">
+                        <div class="copyright">&copy; VistanNextgen Pvt Ltd 2021. All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+    <!--End pagewrapper-->
+
+{% endblock %}

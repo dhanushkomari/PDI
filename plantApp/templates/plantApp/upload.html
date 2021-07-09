@@ -1,0 +1,43 @@
+{% extends 'plantApp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="banner-section banner-one">
+            <div class="banner-carousel owl-theme owl-carousel">
+                <!-- Slide Item -->
+                <div class="slide-item">
+                    <div class="image-layer" style="background-image: url({% static "images/logos/5.jpg" %});"></div>
+                    <div class="left-top-line"></div>
+                    {% comment %} <div class="right-bottom-curve"></div> {% endcomment %}
+                    <div class="right-top-curve"></div>
+                    <div class="auto-container">
+                        <div class="content-box">
+                            <div class="content">
+                                <div class="inner">
+                                    <div class="sub-title">Upload your picture to identify the plant Disease</div>
+                                    
+                                    <h1 class = "title">Plant Disease <br>Identification</h1>
+                                    <div class="link-box">
+                                        
+                                    </div>
+
+                                    
+                                    <a class="theme-btn btn-style-one" href="take-picture.html">
+                                        <i class="btn-curve"></i>
+                                        <span class="btn-title">Upload Picture</span>
+                                    </a>
+                                
+                                    
+                                    
+                                    <br><br><br><br><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+{% endblock %}

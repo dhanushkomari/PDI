@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>Plant Disease Identification | Login</title>
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Teko:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/hover.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/jarallax.css' %}">
+    <link href="{% static 'css/custom-animate.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Responsive File -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+    <!-- Color css -->
+    <link rel="stylesheet" id="jssDefault" href="{% static 'css/colors/color-default.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'images/logos/plant-32.png' %}" id="fav-shortcut" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/logos/plant-32.png' %}" id="fav-icon" type="image/x-icon">
+
+    <!-- Responsive Settings -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="icon"></div>
+        </div>
+
+        <section class="login-wrapper">
+            <div class="login-bg" style="background-image: url({% static 'images/logos/7.jpg' %});"></div>
+            <!-- /.login-bg -->
+            <div class="login-content">
+                <div class="login-content__inner">
+                    <div class="logo-box">
+                        <div class="logo text-center"><a href="index.html" title="Plant Disease Identification"><img src="{% static 'images/logos/pdi-logo1.png' %}" id="dLogo" class="main-logo" alt="Plant Disease Identification" title="Plant Disease Identification"></a></div>
+                    </div>
+                    {% if messages %}
+                        {% for i in messages %}
+                            {{i}}
+                        {% endfor %}
+                    {% endif %}
+                    <form method = "POST">
+                    {% csrf_token %}
+                        <input type="text" placeholder="Enter Username *" name = 'username'>
+                        <input type="password" placeholder="Your Password *" name = 'password'>
+                        <p class="text-right"><a href="forgot-password.html">Forgot your password?</a></p>
+                        <button type='submit' class="theme-btn btn-style-one">
+                            <i class="btn-curve"></i>
+                            <span class="btn-title">Sign in</span>
+                        </button>
+                    </form>
+                    <p class="signup-link">New to PDI? <a href="register.html">Signup</a></p>
+                    <p class="copyright-text">© copyright 2021. All rights reserved.</p><!-- /.copyright-text -->
+                </div><!-- /.login-content__inner -->
+            </div><!-- /.login-content -->
+        </section><!-- /.login-wrapper -->
+
+    </div>
+    <!--End pagewrapper-->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/TweenMax.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/custom-script.js' %}"></script>
+
+</body>
+
+</html>
